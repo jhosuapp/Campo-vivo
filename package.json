@@ -1,0 +1,19 @@
+{
+  "name": "campo",
+  "version": "0.0.1",
+  "description": "campo",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./assets/scss/main.scss ./assets/css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhosuapp/Campo-vivo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jhosuapp/Campo-vivo/issues"
+  },
+  "homepage": "https://github.com/jhosuapp/Campo-vivo#readme"
+}
