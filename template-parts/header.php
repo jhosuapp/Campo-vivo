@@ -8,9 +8,16 @@
     </div>
     <a href="/" sclass="header__logo">
         <img src="assets/img/logo.png" alt="" class="header__logo__image">
+        <img src="assets/img/logo_mobile_white.png" alt="" class="header__logo__image header__logo__image--mobile">
     </a>
     <nav class="header__nav">
         <ul class="header__list">
+            <li class="header__list__item">
+                <form action="" class="header__buscador header__buscador--mobile">
+                    <i class="fa-solid fa-magnifying-glass header__buscador__icono"></i>
+                    <input placeholder="Buscar" type="search" class="header__buscador__input">
+                </form>
+            </li>
             <li class="header__list__item">
                 <a class="header__list__item__link">Modelo de impacto social</a>
             </li>

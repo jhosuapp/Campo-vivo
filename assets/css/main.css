@@ -38,6 +38,9 @@ input[type=search]::-webkit-search-results-decoration {
   max-height: 125px;
   object-fit: contain;
 }
+.header__logo__image--mobile {
+  display: none;
+}
 .header__nav {
   margin-top: 30px;
   width: 65%;
@@ -45,7 +48,7 @@ input[type=search]::-webkit-search-results-decoration {
 .header__list {
   display: flex;
   justify-content: space-between;
-  gap: 30px;
+  gap: 20px;
 }
 .header__list__item {
   color: #fff;
@@ -90,6 +93,9 @@ input[type=search]::-webkit-search-results-decoration {
   top: calc(50% - 9px);
   color: #7ec005;
 }
+.header__buscador--mobile {
+  display: none;
+}
 
 @media (max-width: 1440px) {
   .header__list__item {
@@ -111,18 +117,32 @@ input[type=search]::-webkit-search-results-decoration {
   .header__logo {
     display: none;
   }
+  .header__logo__image {
+    display: none;
+  }
+  .header__logo__image--mobile {
+    display: block;
+    max-width: 50px;
+    padding: 5px;
+  }
   .header__buscador {
     display: none;
   }
   .header__nav {
     height: 95vh;
     width: 95%;
-    background: #7ec005;
+    background: #021d10;
     position: absolute;
-    left: 0;
+    left: -1000px;
     top: 0;
+    opacity: 0;
     margin-top: 0;
     z-index: 9;
+    transition: 0.5s all ease;
+  }
+  .header__nav.active {
+    left: 0;
+    opacity: 1;
   }
   .header__list {
     display: flex;
@@ -130,12 +150,66 @@ input[type=search]::-webkit-search-results-decoration {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;
-    padding: 40px 10px 10px 28px;
+    padding: 40px 28px 10px 28px;
     gap: 0;
     flex: 1;
+    position: relative;
+    overflow: hidden;
+  }
+  .header__list::after {
+    position: absolute;
+    content: "";
+    width: 70%;
+    height: 8px;
+    bottom: 0;
+    background: #ffcd19;
+    left: calc(50% - 35%);
+  }
+  .header__list::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vh;
+    height: 100vh;
+    background-color: #ffffff10;
+    backdrop-filter: blur(1.5px);
+    -webkit-backdrop-filter: blur(1.5px);
+    z-index: -1;
+    pointer-events: none;
   }
   .header__list__item {
     font-size: 17px;
+    width: 100%;
+    text-align: left;
+    position: relative;
+  }
+  .header__list__item:hover {
+    padding-top: 0;
+  }
+  .header__list__item:first-child::after {
+    content: none;
+  }
+  .header__list__item::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1.5px;
+    background-color: #7ec005;
+    bottom: -10px;
+    left: 0;
+  }
+  .header__buscador--mobile {
+    display: block;
+    margin: 0;
+  }
+  .header__buscador--mobile .header__buscador__input {
+    display: block;
+    border-radius: 5px;
+    height: 30px;
+  }
+  .header__buscador--mobile .header__buscador__icono {
+    color: #7ec005;
   }
 }
 .hamburger {
@@ -268,6 +342,44 @@ input[type=search]::-webkit-search-results-decoration {
   .hamburger {
     display: block;
   }
+}
+.footer {
+  position: relative;
+  margin-top: 200px;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/campo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 99;
+}
+.footer::after {
+  position: absolute;
+  content: "";
+  background: rgba(2, 29, 16, 0.7);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.footer__bottom {
+  position: relative;
+}
+.footer__waves {
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+  margin-bottom: -10px;
+}
+.footer__line {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 35%);
+  width: 100%;
+  max-width: 70%;
+  height: 10px;
+  background-color: #ffcd19;
 }
 
 /*# sourceMappingURL=main.css.map */
