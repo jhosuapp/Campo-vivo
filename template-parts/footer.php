@@ -5,22 +5,33 @@
         <div class="footer__redes">
             <div class="footer__left">
                 <p class="footer__text">Síguenos</p>
-                <i class="fa-brands fa-facebook-square"></i>
-                <i class="fa-brands fa-instagram"></i>
+                <div class="footer__contenedor__redes">
+                    <a href="" class="footer__icono-link">
+                        <i class="fa-brands fa-facebook-square footer__icono"></i>
+                    </a>
+                    <a href="" class="footer__icono-link">
+                        <i class="fa-brands fa-instagram footer__icono"></i>
+                    </a>
+                </div>
             </div>
             <div class="footer__center">
-                <img src="assets/img/logo.png" alt="" class="footer__logo">
+                <img src="assets/img/logo.png" alt="" class="header__logo__image footer__logo">
             </div>
             <div class="footer__right">
-                <a href="" class="button">
-                    <i class="button__icono"></i>
+                <a href="" class="button button__icon">
+                    <i class="fa-brands fa-whatsapp button__icono"></i>
                     <span>Compra aquí</span>
                 </a>
-                <a href="" class="button">
+                <a href="" class="button button--amarillo">
                     Contáctenos
                 </a>
             </div>
         </div>
+    </div>
+    <div class="footer__derechos-autor">
+        <p class="footer__derechos-autor-text">
+            +1 959 603 6035 © 2015 Campo Vivo.
+        </p>
     </div>
     <div class="footer__middle">
         <p class="footer__legales">Legales</p>
